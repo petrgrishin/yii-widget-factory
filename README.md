@@ -3,7 +3,7 @@ yii-widget-factory
 [![Travis CI](https://travis-ci.org/petrgrishin/yii-widget-factory.png "Travis CI")](https://travis-ci.org/petrgrishin/yii-widget-factory)
 [![Coverage Status](https://coveralls.io/repos/petrgrishin/yii-widget-factory/badge.png?branch=master)](https://coveralls.io/r/petrgrishin/yii-widget-factory?branch=master)
 
-Фабрика виджетов
+Фабрика виджетов Yiiframework
 
 Установка
 ------------
@@ -26,7 +26,8 @@ yii-widget-factory
 
 Пример решения
 ------------
-####Класс модуля
+####Модуль
+Класс модуля. Инициализируем фабрику виджета комментариев знанием (параметр виджета `listUrl`) о контроллере `comments/list`, расположеном в текущем модуле. 
 ```php
 use \PetrGrishin\WidgetFactory\WidgetFactory;
 
@@ -45,7 +46,8 @@ class CommentsModule extends CWebModule {
 }
 ```
 
-####Контроллер основного приложения
+####Основное приложение
+Класс контроллера
 ```php
 class SiteController extends CController {
     public function actionDetail() {
@@ -71,7 +73,7 @@ class SiteController extends CController {
 }
 ```
 
-####Представление контроллера
+Представление контроллера и создание виджета в нем
 ```php
     $commentsWidgetFactory->createInstance(array('param' => 'value'))->run();
 ```
