@@ -57,7 +57,7 @@ class SiteController extends CController {
     }
     
     /**
-     * @return CommentsModule
+     * @return \PetrGrishin\WidgetFactory\WidgetFactory
      */
     protected function getCommentsWidgetFactory() {
         return $this->getCommentsModule()->getCommentsWidgetFactory()
