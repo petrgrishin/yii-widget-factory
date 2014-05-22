@@ -75,5 +75,6 @@ class SiteController extends CController {
 
 Представление контроллера и создание виджета в нем
 ```php
-    $commentsWidgetFactory->createInstance(array('param' => 'value'))->run();
+    $commentsWidget = $commentsWidgetFactory->createInstance(array('param' => 'value'));
+    $commentsWidget->run();
 ```
