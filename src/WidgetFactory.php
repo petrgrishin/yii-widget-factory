@@ -12,6 +12,13 @@ class WidgetFactory {
     private $_params = array();
 
     /**
+     * @return string
+     */
+    public static function className() {
+        return get_called_class();
+    }
+
+    /**
      * @param string $className
      * @return $this
      */
