@@ -85,6 +85,13 @@ class WidgetFactory {
     }
 
     /**
+     * @return WidgetFactory
+     */
+    public function copy() {
+        return clone $this;
+    }
+
+    /**
      * @param array $params
      * @return mixed
      * @throws \Exception
